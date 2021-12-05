@@ -9,7 +9,7 @@ import javax.persistence.Table;
 public class Entity {
     @Id
     @Column(name = "restaurant_id")
-    private String restaurantId;
+    private Long restaurantId;
     @Column(name = "restaurant_name")
     private String restaurantName;
     @Column(name = "city")
@@ -19,11 +19,11 @@ public class Entity {
     @Column(name = "rating")
     private Double rating;
 
-    public String getRestaurantId() {
+    public Long getRestaurantId() {
         return restaurantId;
     }
 
-    public void setRestaurantId(String restaurantId) {
+    public void setRestaurantId(Long restaurantId) {
         this.restaurantId = restaurantId;
     }
 
