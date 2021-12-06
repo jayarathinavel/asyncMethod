@@ -37,7 +37,8 @@ public class Service {
                 if(row.getRowNum()>0){
                     readCellsAndSaveRow(progressId, row);
                 }
-                TimeUnit.SECONDS.sleep(1); //Intentional Sleep to mock big process
+                //Intentional Sleep to mock big process, if needed. Even the normal flow takes a minute to insert all 10000 rows.
+                //TimeUnit.SECONDS.sleep(1);
             }
             logger.info("Saved all values to Database");
             progressService.saveProgress(progressId, "Saved all values to Database");
